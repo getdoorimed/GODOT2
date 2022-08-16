@@ -245,7 +245,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 77, 87 )
+position = Vector2( 127, 88 )
+
+[node name="Area2D" parent="Player" instance=ExtResource( 5 )]
+position = Vector2( 185, -35 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 200.5, 161 )
