@@ -247,9 +247,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 127, 88 )
 
-[node name="Area2D" parent="Player" instance=ExtResource( 5 )]
-position = Vector2( 185, -35 )
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 200.5, 161 )
 
@@ -296,3 +293,19 @@ rotation = 3.14159
 [node name="Area2D5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 518, 152 )
 rotation = -3.14159
+
+[node name="Area2D6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 312, -24 )
+rotation = 6.28138
+
+[node name="Area2D7" parent="." instance=ExtResource( 5 )]
+position = Vector2( -8, 24 )
+
+[node name="Area2D" parent="Area2D7" instance=ExtResource( 5 )]
+position = Vector2( 16, 16 )
+
+[node name="Area2D2" parent="Area2D7" instance=ExtResource( 5 )]
+position = Vector2( 32, 16 )
+
+[node name="Area2D8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 56 )
