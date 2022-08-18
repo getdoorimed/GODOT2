@@ -94,7 +94,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -217,7 +217,7 @@ tracks/4/keys = {
 script = ExtResource( 1 )
 
 [node name="Button" type="Sprite" parent="."]
-position = Vector2( -46, 30 )
+position = Vector2( 17, 20 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -236,7 +236,7 @@ position = Vector2( 0, -1 )
 shape = SubResource( 2 )
 
 [node name="Door" type="Sprite" parent="."]
-position = Vector2( 81, 26 )
+position = Vector2( 91, 24 )
 scale = Vector2( 0.91875, 1 )
 texture = ExtResource( 4 )
 hframes = 10
@@ -260,3 +260,5 @@ anims/ButtonUp = SubResource( 5 )
 anims/DoorClosed = SubResource( 6 )
 anims/DoorOpen = SubResource( 7 )
 anims/RESET = SubResource( 8 )
+
+[connection signal="body_entered" from="Button/Area2D" to="." method="_on_Area2D_body_entered"]
