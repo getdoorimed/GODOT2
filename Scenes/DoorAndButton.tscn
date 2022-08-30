@@ -100,7 +100,6 @@ tracks/3/keys = {
 [sub_resource type="Animation" id=7]
 resource_name = "DoorOpen"
 length = 1.4
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Door:texture")
 tracks/0/interp = 1
