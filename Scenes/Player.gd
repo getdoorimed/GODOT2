@@ -26,7 +26,7 @@ func update_animation(anim):
 		
 	match(anim):
 		state.FALL:
-			$AnimationPlayer.play("FalLPlayer")
+			$AnimationPlayer.play("FallPlayer")
 		state.ATTACK:
 			$AnimationPlayer.play("AttackPlayer")
 		state.IDLE:

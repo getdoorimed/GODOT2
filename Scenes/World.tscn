@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tileset.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/SpinningBlade.gd" type="Script" id=8]
 [ext_resource path="res://Free/Traps/Saw/On (38x38).png" type="Texture" id=9]
 [ext_resource path="res://Scenes/SavePoint.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/World.gd" type="Script" id=11]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -286,6 +287,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="World" type="Node2D"]
 position = Vector2( -3, 0 )
+scale = Vector2( 1.0406, 0.96657 )
+script = ExtResource( 11 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 137, 88 )
