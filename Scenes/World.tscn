@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tileset.png" type="Texture" id=2]
@@ -7,50 +7,8 @@
 [ext_resource path="res://Scenes/Spiketrap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/DoorAndButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/SpinningBlade.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/SpinningBlade.gd" type="Script" id=8]
-[ext_resource path="res://Free/Traps/Saw/On (38x38).png" type="Texture" id=9]
 [ext_resource path="res://Scenes/SavePoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/World.gd" type="Script" id=11]
-
-[sub_resource type="Animation" id=2]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "Spin"
-length = 0.8
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
-}
-
-[sub_resource type="Curve2D" id=29]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 31, -16, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15, 0, 0, 0, 0, -17, 15, 0, 0, 0, 0, -17, 30, 0, 0, 0, 0, -65, 30, 0, 0, 0, 0, -18, 30, 0, 0, 0, 0, -17, 15, 0, 0, 0, 0, 1, 15, 0, 0, 0, 0, 0, 0 )
-}
-
-[sub_resource type="CircleShape2D" id=4]
-radius = 18.0278
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -355,31 +313,6 @@ position = Vector2( 90.9568, 24.1638 )
 
 [node name="SpinningBlade" parent="." instance=ExtResource( 7 )]
 position = Vector2( 511, 111 )
-
-[node name="SpinningBlade2" type="Node2D" parent="."]
-position = Vector2( 465, 177 )
-script = ExtResource( 8 )
-follow_speed = 100
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SpinningBlade2"]
-root_node = NodePath("../Path2D/PathFollow2D/Sprite")
-playback_speed = -3.0
-anims/RESET = SubResource( 2 )
-anims/Spin = SubResource( 3 )
-
-[node name="Path2D" type="Path2D" parent="SpinningBlade2"]
-curve = SubResource( 29 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade2/Path2D"]
-
-[node name="Sprite" type="Sprite" parent="SpinningBlade2/Path2D/PathFollow2D"]
-texture = ExtResource( 9 )
-hframes = 8
-
-[node name="Area2D" type="Area2D" parent="SpinningBlade2/Path2D/PathFollow2D/Sprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinningBlade2/Path2D/PathFollow2D/Sprite/Area2D"]
-shape = SubResource( 4 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 25 )
