@@ -3,10 +3,6 @@
 [ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/herochar_spritesheet(new).png" type="Texture" id=2]
 
-[sub_resource type="CapsuleShape2D" id=10]
-radius = 6.5
-height = 2.0
-
 [sub_resource type="Animation" id=2]
 resource_name = "AttackPlayer"
 length = 0.4
@@ -142,14 +138,13 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 10, 11, 12 ]
 }
 
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 4.02829
+height = 6.24403
+
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 scale = Vector2( 0.992976, 0.978979 )
 script = ExtResource( 1 )
-
-[node name="BodyCollider" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 0.5 )
-scale = Vector2( 1.00557, 1.00319 )
-shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -166,3 +161,15 @@ anims/PlayerRoll = SubResource( 6 )
 anims/PushingPlayer = SubResource( 7 )
 anims/RESET = SubResource( 8 )
 anims/RunningPlayer = SubResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( -3.02122, 8.17178, 1.00707, 8.17178, 3.02122, 7.15031, 3.02122, -5.10736, 1.00707, -6.12883, -3.02122, -6.12883, -5.03537, -5.10736, -5.03537, 7.15031 )
+
+[node name="DeathZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2( -1.00707, 1.02147 )
+shape = SubResource( 10 )
+
+[connection signal="area_entered" from="DeathZone" to="." method="_on_DeathZone_area_entered"]
