@@ -163,7 +163,6 @@ anims/RESET = SubResource( 8 )
 anims/RunningPlayer = SubResource( 9 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -3.02122, 8.17178, 1.00707, 8.17178, 3.02122, 7.15031, 3.02122, -5.10736, 1.00707, -6.12883, -3.02122, -6.12883, -5.03537, -5.10736, -5.03537, 7.15031 )
 
 [node name="DeathZone" type="Area2D" parent="."]
