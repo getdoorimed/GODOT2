@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/[YT2mp3.info] - alan walker - faded (ncs release) at very low quality (320kbps).mp3-7c143ebef610850a51fd966a94a3a4fa.mp3str"
+
+[deps]
+
+source_file="res://sfx/Music/[YT2mp3.info] - alan walker - faded (ncs release) at very low quality (320kbps).mp3"
+dest_files=[ "res://.import/[YT2mp3.info] - alan walker - faded (ncs release) at very low quality (320kbps).mp3-7c143ebef610850a51fd966a94a3a4fa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

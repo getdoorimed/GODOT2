@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/[YT2mp3.info] - Alan Walker - Fade [COPYRIGHTED NCS Release] (320kbps).mp3-5e3a7097e79eb998fd5e1703b1e1f2b2.mp3str"
+
+[deps]
+
+source_file="res://sfx/Music/[YT2mp3.info] - Alan Walker - Fade [COPYRIGHTED NCS Release] (320kbps).mp3"
+dest_files=[ "res://.import/[YT2mp3.info] - Alan Walker - Fade [COPYRIGHTED NCS Release] (320kbps).mp3-5e3a7097e79eb998fd5e1703b1e1f2b2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
