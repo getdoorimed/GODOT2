@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/[YT2mp3.info] - Retro 8 bit Jump Sound Effect for FREE!! iggchan (320kbps).mp3-87b9ea3b1df8cb693f8b777a9c32496d.mp3str"
+
+[deps]
+
+source_file="res://sfx/Music/[YT2mp3.info] - Retro 8 bit Jump Sound Effect for FREE!! iggchan (320kbps).mp3"
+dest_files=[ "res://.import/[YT2mp3.info] - Retro 8 bit Jump Sound Effect for FREE!! iggchan (320kbps).mp3-87b9ea3b1df8cb693f8b777a9c32496d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
