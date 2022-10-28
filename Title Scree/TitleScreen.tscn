@@ -44,6 +44,7 @@ alignment = 1
 [node name="Play" parent="Menu/CenterRow/Button" instance=ExtResource( 1 )]
 margin_top = 77.0
 margin_bottom = 157.0
+scene_to_load = "res://Scenes/World.tscn"
 
 [node name="VersionLabel" type="Label" parent="Menu"]
 margin_top = 306.0

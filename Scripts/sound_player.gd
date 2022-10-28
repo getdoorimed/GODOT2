@@ -27,3 +27,13 @@ func _ready():
 	music.stream = load(music_tracks["main"])
 	add_child(music)
 	music.play()
+
+
+
+func play_sound_effect(sfx):
+	var sound = AudioStreamPlayer.new()
+	sound.stream = load(sound_effects[sfx])
+	add_child(sound)
+	sound.play()
+	yield(sound,"finished")
+	sound.queue_free()

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/[YT2mp3.info] - Retro 8 bit Jump Sound Effect for FR
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
